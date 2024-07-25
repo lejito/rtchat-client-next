@@ -1,5 +1,6 @@
 import { KeyIcon } from "@/components/icons/key-icon.component";
 import { UserIcon } from "@/components/icons/user-icon.component";
+import Link from "next/link";
 
 export default function Login() {
   return (
@@ -15,6 +16,7 @@ export default function Login() {
             placeholder="Username"
             className="form__input"
             id="username"
+            name="username"
           />
           <UserIcon className="form__icon" width={32} height={32} />
         </div>
@@ -25,6 +27,7 @@ export default function Login() {
             placeholder="Password"
             className="form__input"
             id="password"
+            name="password"
           />
           <KeyIcon className="form__icon" width={32} height={32} />
         </div>
@@ -32,9 +35,9 @@ export default function Login() {
         <div className="form__control form__control--button">
           <button className="form__button">Join chat!</button>
 
-          <a className="form__link" href="/register">
+          <Link className="form__link" href="/register">
             Don&apos;t have an account? Click here!
-          </a>
+          </Link>
         </div>
       </form>
     </div>
